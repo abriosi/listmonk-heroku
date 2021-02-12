@@ -23,6 +23,9 @@ http {
 
   #Must read the body in 5 seconds.
   client_body_timeout 5;
+  
+  #Change the default limit of body size
+  client_max_body_size 100M;
 
   upstream listmonk {
     server localhost:9000;
